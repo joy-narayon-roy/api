@@ -7,7 +7,7 @@
 function myIpGetController(req, res, next) {
   const clientIP = req.ip;
   res.status(200).json({
-    ip: clientIP,
+    ip: "Top secret",
   });
 }
 
