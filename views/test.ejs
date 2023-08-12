@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+
+<body>
+    <%- include('components/header',{title:"Test Result"}); -%>
+    <main>
+        <h1>This is list</h1>
+        <ul>
+            <% datas.forEach(data=>{ %>
+                <li>Test Roll : <%= data.roll %>; Registation : <%= data.reg %>
+                </li>
+                <% }) %>
+        </ul>
+        <button onclick="getMore()">More</button>
+    </main>
+<script>
+function getMore(){
+    console.log("Loading")
+}
+</script>
+</body>
+
+</html>
