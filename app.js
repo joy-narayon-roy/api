@@ -3,11 +3,13 @@ const express = require("express");
 const mongoose = require("mongoose");
 const useRoutes = require("./routers");
 const { reqLog, globalErrorHandler } = require("./middleware");
+const cors = require("cors");
 const app = express();
 
 const middlewares = [
   express.static("public"),
   reqLog,
+  cors({ origin: "*" }),
   express.json(),
   express.urlencoded({
     extended: true,
